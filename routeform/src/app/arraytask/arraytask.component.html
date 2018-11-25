@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<p>
+  hi heloo,,......IM array task
+</p>
+
+<table border="1" align ="center">
+  
+
+  <tr>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td> Email</td>
+  </tr>
+
+
+  <tr *ngFor="let obj of model">
+    <td>{{obj.firstname}}</td>
+    <td>{{obj.lastname}}</td>
+    <td> {{obj.email}}</td>
+  </tr>
+
+<tr *ngFor="let person of userlist">
+   <td>{{person.name}}</td>
+
+
+
+</table> 
+<p> retrive with index</p>
+<ul> 
+  <li *ngFor="let person of userlist; let i = index"> 
+    {{ i + 1 }} - {{ person.name }} 
+  </li>
+</ul>
+
+
+
+<p> grouped array</p>
+
+<ul *ngFor="let group of peoplemycountry"> 
+   <li>{{ group.country }}</li>
+   <ul>
+    <li *ngFor="let city of group.people"> 
+      {{ city.name }}
+    </li>
+   </ul>
+ </ul>
+   
+ 
